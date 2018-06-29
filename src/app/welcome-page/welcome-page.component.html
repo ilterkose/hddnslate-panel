@@ -1,0 +1,49 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/welcome">
+        <mat-icon>home</mat-icon>
+        <span class="nav-caption">Home</span>
+      </a>
+      <a mat-list-item routerLink="/welcome">
+        <mat-icon>equalizer</mat-icon>
+        <span class="nav-caption">Duality</span>
+      </a>
+      <a mat-list-item routerLink="/welcome">
+        <mat-icon>public</mat-icon>
+        <span class="nav-caption">Twitter</span>
+      </a>
+      <a mat-list-item routerLink="/welcome">
+        <mat-icon>exit_to_app</mat-icon>
+        <span class="nav-caption">Log out</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="#f6f5fa">
+      <div fxHide.gt-sm>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div class="logo"><img src="http://hiddenslate.com/img/hs_black.png"> </div>
+      <div fxLayout fxLayoutAlign="flex-end" class="menu" fxHide.xs >
+        <ul fxLayout fxLayoutGap="3rem" class="nav-items">
+          <li><a routerLink="/welcome"> Home </a></li>
+          <li><a routerLink="/welcome"> Duality </a></li>
+          <li><a routerLink="/welcome"> Twitter </a></li>
+          <div fxFlex fxLayout fxLayoutAlign="flex-end">
+            <ul><a class="exit-btn" routerLink="/login">
+              <mat-icon class="lgout">exit_to_app</mat-icon>
+              Log out
+            </a></ul>
+          </div>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

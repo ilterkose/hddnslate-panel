@@ -1,0 +1,27 @@
+mat-form-field {
+  width: 350px;
+}
+
+.cardstyle {
+  transform: translate(0%,100%);
+  display: inline;
+}
+
+.button {
+  transform: translate(355%,-30%);
+}
+.logo{
+  transform: translate(20%);
+}
+
+.emailbox{
+  transform: translate(10%,5%);
+}
+.passwordbox {
+  transform: translate(10%,5%);
+  padding-bottom: 2rem;
+}
+
+
+.button.color_green { color: #00FF00; }
+.material-icons.color_white { color: #FFFFFF; }

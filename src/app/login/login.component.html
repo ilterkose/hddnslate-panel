@@ -1,0 +1,38 @@
+<section class="signup-form">
+  <form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)" >
+    <section class="cardstyle" fxLayout fxLayoutAlign="center center">
+      <mat-card fxFlex="500px">
+        <mat-card-title><img src="http://hiddenslate.com/img/hs_black.png" class="logo"></mat-card-title>
+        <mat-card-content>
+          <mat-form-field class="emailbox">
+            <input fxLayout="column"
+                   type="email"
+                   matInput
+                   placeholder="Your email"
+                   ngModel
+                   name="email"
+                   email>
+            <mat-error> E- mail is invalid.</mat-error>
+          </mat-form-field>
+          <mat-form-field class="passwordbox" hintLabel="Should be at least 6 characters long.">
+            <input
+              fxLayout="column"
+              type="password"
+              matInput
+              placeholder="Your password"
+              ngModel
+              name="password"
+              required
+              minlength="6"
+              #pwInput="ngModel">
+            <mat-hint align="end"> {{ pwInput.value?.length }} / 6 </mat-hint>
+
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="button" type="submit" mat-raised-button color="primary"> Login </button>
+        </mat-card-actions>
+      </mat-card>
+    </section>
+  </form>
+</section>
